@@ -1,0 +1,16 @@
+customer_id,name,age,email,country,salary,registration_date
+001,John Doe,23,john.doe@email.com,Kenya,50000,2025-01-15
+002,Jane Doe,,jane.doe@email.com,Kenya,60000,15/02/2025
+003,Mike Smith,twenty-five,mike.smith@email.com,Kenya,55000,2025/03/10
+004,Sarah Wanjiku,29,,Kenya,,2025-04-01
+005,Peter Otieno,31,peter@email,Kenya,-5000,2025-04-15
+006,Alice Kamau,27,alice.kamau@email.com,Kenya,72000,2025-05-20
+007,Brian Kariuki,N/A,brian.k@email.com,Uganda,48000,2025-06-05
+008,Mary Achieng,35,mary@email.com,Kenya,65000,06-30-2025
+009,David Mwangi,40,david@email.com,Kenya,70000,2025-07-12
+010,,26,james@email.com,Kenya,52000,2025-08-01
+011,James Kimani,26,james@email.com,Kenya,52000,2025-08-01
+012,Lucy Njeri,150,lucy@email.com,Kenya,58000,2025-09-10
+013,Mark Ochieng,33,mark@email.com,Kenya,unknown,2025-10-02
+014,Grace Wambui,28,grace@email.com,Kenya,61000,
+015,Daniel Maina,30,daniel@email.com,Kenya,59000,2025-11-20

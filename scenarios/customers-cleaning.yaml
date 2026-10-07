@@ -34,7 +34,7 @@ issues:
   - id: missing_values
     category: review
     description: Missing values in required or optional fields
-    expected_count: 4
+    expected_count: 5
     action: flag
 
   - id: invalid_email

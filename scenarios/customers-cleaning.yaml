@@ -1,0 +1,73 @@
+name: customers-cleaning
+version: 1.0
+
+description: >
+  Test scenario for evaluating DAC-12's ability to detect and safely
+  handle common data-quality problems in a customer dataset.
+
+input:
+  file: datasets/raw/customers_dirty.csv
+
+expected:
+  file: datasets/expected/customers_clean.csv
+
+issues:
+
+  - id: duplicate_rows
+    category: automatic
+    description: Exact duplicate records
+    expected_count: 1
+    action: remove
+
+  - id: whitespace
+    category: automatic
+    description: Leading and trailing whitespace
+    expected_count: 2
+    action: trim
+
+  - id: country_normalization
+    category: automatic
+    description: Inconsistent country capitalization and whitespace
+    expected_count: 4
+    action: normalize
+
+  - id: missing_values
+    category: review
+    description: Missing values in required or optional fields
+    expected_count: 4
+    action: flag
+
+  - id: invalid_email
+    category: review
+    description: Potentially invalid email address
+    expected_count: 1
+    action: flag
+
+  - id: mixed_age_type
+    category: review
+    description: Text value found in numeric age column
+    expected_count: 1
+    action: flag
+
+  - id: suspicious_salary
+    category: manual
+    description: Negative salary value
+    expected_count: 1
+    action: review
+
+  - id: suspicious_age
+    category: manual
+    description: Unusually high age value
+    expected_count: 1
+    action: review
+
+  - id: unknown_salary
+    category: review
+    description: Non-numeric value in salary column
+    expected_count: 1
+    action: flag
+
+  - id: date_inconsistency
+    category: review
+    description: Multiple date formats detected
+    action: flag
